@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Consumer } from '../context'
+import React, { Component } from 'react';
+import { Consumer } from '../context';
 
 class Contact extends Component {
 
@@ -42,11 +42,14 @@ class Contact extends Component {
                         ) : null }
                         
                     </div>
+
                     
                     )
+
                 }}
 
             </Consumer>
+
         )
 
     }

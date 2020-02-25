@@ -1,8 +1,31 @@
-import React, { Component, Fragment } from 'react'
-import Contact from './Contact'
-import { Consumer } from '../context'
+import React, { Component } from 'react';
+import Contact from './Contact';
+import { Consumer } from '../context';
+import './style.css';
+import AddContact from './AddContact';
+
 
 class List extends Component {
+
+    state = {
+        visible: false
+    }
+
+    showModal = () => {
+        this.setState({
+            visible: true
+        });
+    }
+    
+    _displayModal = () => {
+    if(this.state.visible) {
+        return (
+            <div className="popup">
+                <AddContact />
+            </div>
+        );
+    }
+    }
 
     render() {
 
@@ -21,9 +44,14 @@ class List extends Component {
                             tel={contact.tel}
                             />
                         ))}
+                        <button className="bouton" onClick={this.showModal}>Ajouter un contact</button>
+
+                        {this._displayModal()}
+
                     </div>
                     )
                 }}
+                
             </Consumer>
         )
     }

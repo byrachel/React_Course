@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Consumer } from '../context'
-import uuid from 'uuid'
+import React, { Component } from 'react';
+import { Consumer } from '../context';
+import uuid from 'uuid';
 
 export default class AddContact extends Component {
 
@@ -34,7 +34,10 @@ export default class AddContact extends Component {
     render() {
 
         return(
+
+            
             <Consumer>
+  
                 {value => {
                     return(
                         <div className="container">
@@ -86,7 +89,9 @@ export default class AddContact extends Component {
                     )
                 }}
                 
+                
             </Consumer>
+            
 
         )
 
