@@ -20,6 +20,9 @@ function Header() {
                         <li className="nav-item d-inline-block mr-2">
                             <Link to="/blog" className="nav-link">Blog</Link>
                         </li>
+                        <li className="nav-item d-inline-block mr-2">
+                            <Link to="/hook" className="nav-link">Hook</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

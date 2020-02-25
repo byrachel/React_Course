@@ -9,7 +9,8 @@ import AddContact from './composants/AddContact'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Error from './composants/Error'
 import Blog from './composants/Blog';
-import NvPost from './composants/NvPost'
+import NvPost from './composants/NvPost';
+import Hook from './composants/hook';
 
 class App extends Component {
 
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path="/contact" component={List} />
           <Route exact path="/addcontact" component={AddContact} />
           <Route exact path="/blog" component={NvPost} />
+          <Route exact path="/hook" component={Hook} />
           <Route exact path="/" component={Blog} />
           <Route component={Error} />
           </Switch>
